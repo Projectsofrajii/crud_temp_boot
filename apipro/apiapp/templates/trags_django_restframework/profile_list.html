@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>retrieve data</title>
+</head>
+<body>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+  <tr>
+    <th>User_id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Area</th>
+    <th>City</th>
+  </tr></thead>
+   <tbody>
+    {% for data in dataset %}
+  <tr>
+    <td>{{ data.user_id }}</td>
+    <td>{{ data.name }}</td>
+    <td>{{ data.age }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.contact }}</td>
+    <td>{{ data.area }}</td>
+    <td>{{ data.city }}</td>
+  </tr>
+        {% endfor %}
+    </tbody></table>
+    </div>
+</body>
+</html>

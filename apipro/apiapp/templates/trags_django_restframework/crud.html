@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>login page</title>
+</head>
+<body>{% block content %}
+<div class=" col-md-6 text-center container card fluid-container"><br><br>
+    <div class="card-header">
+        <a href="/crud/">Django Restframework for user Database</a></div>
+    <div class="card-body horizontal">
+        <ul class=" list-group list-group-flush ">
+            <li class="list-group-item">Create new record</li>
+                <a href="{% url 'restapp:create' %}" class="btn btn-sm btn-outline-success" type="button">Create record</a>
+            <li class="list-group-item">Retrieve record</li>
+                <a href="{% url 'restapp:useralldata' %}" class="btn btn-sm btn-outline-success" type="button">Retrieve record</a>
+            <li class="list-group-item">Update existing record</li>
+            <li class="list-group-item">Delete existing record</li>
+            <li class="list-group-item">Delete entire record</li>
+
+        </ul>
+</div></div>
+<div class="card-footer"><a href = "{% url 'loginapp:logout' %}">Logout here</a>
+</div>
+{% endblock %}
+</body></html>
